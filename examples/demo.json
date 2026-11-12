@@ -1,0 +1,36 @@
+{
+  "packages": [
+    {
+      "id": "app",
+      "requirements": [
+        {
+          "package": "engine",
+          "when_extra": "fast",
+          "activate_extras": [
+            "simd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engine",
+      "requirements": [
+        {
+          "package": "native",
+          "when_extra": "simd"
+        }
+      ]
+    },
+    {
+      "id": "native"
+    }
+  ],
+  "roots": [
+    {
+      "package": "app",
+      "extras": [
+        "fast"
+      ]
+    }
+  ]
+}
